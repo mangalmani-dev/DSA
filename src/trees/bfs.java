@@ -4,15 +4,27 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class bfs {
-    public static void BFS(Node root){
-        Queue<Node> q= new LinkedList<>();
-         if(root!=null)q.add(root);
-         while (q.size()>0){
-              Node front = q.remove();
-             System.out.print(front.val+" ");
-             if(front.left!=null)q.add(front.left);
-             if(front.right!=null) q.add(front.right);
-         }
+//    public static void BFS(Node root){
+//        Queue<Node> q= new LinkedList<>();
+//         if(root!=null)q.add(root);
+//         while (q.size()>0){
+//              Node front = q.remove();
+//             System.out.print(front.val+" ");
+//             if(front.left!=null)q.add(front.left);
+//             if(front.right!=null) q.add(front.right);
+//         }
+//    }
+
+    public static void bfs(Node root){
+        Queue<Node> q = new LinkedList<>();
+       if(root!=null)q.add(root);
+       while (q.size()>0) {
+           Node front = q.remove();
+           System.out.print(front.val+" ");
+           if (front.right != null) q.add(front.right);
+           if (front.left != null) q.add(front.left);
+
+       }
     }
     public static void main(String[] args) {
         Node a = new Node(1);
@@ -31,7 +43,7 @@ public class bfs {
         c.right = f;
         System.out.println("Level order");
 
-        BFS(a);
+        bfs(a);
 
 
     }
