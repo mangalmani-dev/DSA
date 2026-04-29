@@ -33,5 +33,6 @@ public class Occurance {
             }
         }
         System.out.println("Upper bound "+ (ub-1));
+        System.out.println(ub-lb);
     }
 }
